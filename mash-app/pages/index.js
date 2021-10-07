@@ -1,7 +1,13 @@
-import Head from 'next/head'
-import Image from 'next/image'
+import { useRouter } from 'next/router'
 
-export default function Home() {
+const Home = () => {
+  const router = useRouter();
+
+  const handleClick = (e) => {
+    e.preventDefault()
+    router.push('/details')
+  }
+
   return (
     <div>
       <header className="header-section">
@@ -41,8 +47,8 @@ export default function Home() {
                   <p>The best of Russian music, treats and of course alcohol with DJ Liana.
                     Dancers, competitions and more!
                     Tickets available now!</p>
-                  <button>
-                    <a href="details.html"> View details </a> </button>
+                  <button onClick={handleClick}>
+                    <a> View details </a> </button>
                 </div>
               </div>
             </div>
@@ -62,7 +68,7 @@ export default function Home() {
                   <p>The best of Russian music, treats and of course alcohol with DJ Liana.
                     Dancers, competitions and more!
                     Tickets available now!</p>
-                  <button> <a href="details.html"> View details </a>
+                  <button onClick={handleClick}> <a> View details </a>
                   </button>
                 </div>
               </div>
@@ -94,3 +100,5 @@ export default function Home() {
     </div>
   )
 }
+
+export default Home;

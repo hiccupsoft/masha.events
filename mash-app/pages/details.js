@@ -1,4 +1,4 @@
-export default function DetailPage() {
+const Details = () => {
     return (
         <div>
             <header className="header-details-section">
@@ -94,3 +94,5 @@ export default function DetailPage() {
         </div>
     )
 }
+
+export default Details;
