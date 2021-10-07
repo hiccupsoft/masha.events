@@ -1,0 +1,20 @@
+[
+    {
+        "path": "russian-night-with-dj-liana",
+        "datetime": "Friday, Oct 15, 2020 | 21:00 - 03:00", 
+        "title": "Russian Night with DJ Liana", 
+        "price": "€35.00 to €410.00",
+        "location": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12923.61887053633!2d14.4827954!3d35.9248322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40576436b0c1d0a0!2sIvy%20House%20Malta!5e0!3m2!1sen!2sin!4v1633532251884!5m2!1sen!2sin",
+        "address1": "Ivy House Malta",
+        "address2": "Triq Tunis, Pembroke, Malta"
+    },
+    {
+        "path": "foo",
+        "datetime": "Friday, Oct 15, 2020 | 21:00 - 03:00", 
+        "title": "Russian Night with DJ Liana", 
+        "price": "€35.00 to €410.00",
+        "location": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12923.61887053633!2d14.4827954!3d35.9248322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40576436b0c1d0a0!2sIvy%20House%20Malta!5e0!3m2!1sen!2sin!4v1633532251884!5m2!1sen!2sin",
+        "address1": "Ivy House Malta",
+        "address2": "Triq Tunis, Pembroke, Malta"
+    }
+]

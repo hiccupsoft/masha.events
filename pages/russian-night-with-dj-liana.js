@@ -1,4 +1,10 @@
-const Details = () => {
+const RussianNightWithDJLiana = (props) => {
+
+    const handleBackToHome = (e) => {
+        e.preventDefault()
+        router.push('/')
+    }
+
     return (
         <div>
             <header className="header-details-section">
@@ -9,16 +15,16 @@ const Details = () => {
                     <div className="details-inner-section">
                         <div className="home-page">
                             <i className="fas fa-arrow-left" />
-                            <a href="index.html">Back to home</a>
+                            <a onClick={handleBackToHome}>Back to home</a>
                         </div>
                         <div className="details-view-wrapper">
-                            <h1>Russian Night with DJ Liana. </h1>
+                            <h1>{props.title}. </h1>
                             <div className="booking-card">
                                 <div className="booking-card-header">
                                     <h2>Date &amp; time</h2>
-                                    <button> €35.00 to €410.00</button>
+                                    <button> {props.price}</button>
                                 </div>
-                                <h6>Friday, Oct 15, 2020 | 21:00 - 03:00</h6>
+                                <h6>{props.datetime}</h6>
                                 <a href="https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503" target="_blank"><button className="book-now">Book now</button></a>
                                 <p>All sales are final. Once booked, tickets can not be transferred or refunded.</p>
                                 <div className="booking-card-footer">
@@ -34,8 +40,8 @@ const Details = () => {
                 <div className="container">
                     <div className="venue-details-wrapper">
                         <div className="address-wrapper">
-                            <h1>Russian night with DJ Liana</h1>
-                            <p>Russian Night with DJ Liana. <br />
+                            <h1>{props.title}</h1>
+                            <p>{props.title}. <br />
                                 The best of Russian music, treats and of course alcohol with DJ Liana. Dancers, competitions and
                                 more! </p>
                             <p>
@@ -46,7 +52,7 @@ const Details = () => {
                         <div className="map">
                             <h1>Venue</h1>
                             {/* <img src="static/images/location.svg" alt=""> */}
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12923.61887053633!2d14.4827954!3d35.9248322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40576436b0c1d0a0!2sIvy%20House%20Malta!5e0!3m2!1sen!2sin!4v1633532251884!5m2!1sen!2sin" width="400px" height="357px" style={{ border: 0 }} allowFullScreen loading="lazy" />
+                            <iframe src={props.location} width="400px" height="357px" style={{ border: 0 }} allowFullScreen loading="lazy" />
                         </div>
                     </div>
                     <div className="venue-details-wrap">
@@ -58,8 +64,8 @@ const Details = () => {
                             </p>
                         </div>
                         <div className="address-wrapper address-flex">
-                            <h1>Ivy House Malta</h1>
-                            <span>Triq Tunis, Pembroke, Malta</span>
+                            <h1>{props.address1}</h1>
+                            <span>{props.address2}</span>
                             <div className="social-group">
                                 <h1>Share with friends</h1>
                                 <div className="social-icons">
@@ -95,4 +101,15 @@ const Details = () => {
     )
 }
 
-export default Details;
+export const getServerSideProps = async ({req, res, resolvedUrl}) => {
+    console.log(process.env.NEXT_PUBLIC_APP_URL);
+    
+    const url = resolvedUrl.replace("/", "");
+    const ret = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events/${url}`);
+    const data = await ret.json();
+    return {
+        props: data
+    }
+};
+
+export default RussianNightWithDJLiana;

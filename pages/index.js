@@ -5,7 +5,7 @@ const Home = () => {
 
   const handleClick = (e) => {
     e.preventDefault()
-    router.push('/details')
+    router.push('/russian-night-with-dj-liana')
   }
 
   return (
