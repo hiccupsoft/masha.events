@@ -285,8 +285,7 @@ h1, h2 ,h3 ,h4 , h6 , p {
 
 /*********** Details-Page ********/
 .details-inner-section {
-    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('../public/static/images/details-img1.jpg');
-    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(./images/details-img1.jpg);    background-size: cover;
     background-repeat: no-repeat;
     padding:27px 68px 54px 103px ;
     margin-top: 67px;
