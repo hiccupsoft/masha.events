@@ -25,7 +25,7 @@ const RussianNightWithDJLiana = (props) => {
                                     <button> {props.price}</button>
                                 </div>
                                 <h6>{props.datetime}</h6>
-                                <a href="https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503" target="_blank"><button className="book-now">Book now</button></a>
+                                <a href="https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503"><button className="book-now">Book now</button></a>
                                 <p>All sales are final. Once booked, tickets can not be transferred or refunded.</p>
                                 <div className="booking-card-footer">
                                     <a href="">Terms &amp; conditions</a>
