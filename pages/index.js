@@ -59,7 +59,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="card-wrapper-section" id="mobile-card">
+          {/* <div className="card-wrapper-section" id="mobile-card">
             <div className="card-details-wrapper_1">
               <h2 className="right-title">Featured party</h2>
               <div className="card-info" >
@@ -82,7 +82,7 @@ const Home = () => {
             <div className="details-wrapper-1">
               <img src="static/images/card-1.png" alt="" className="card-2-img" />
             </div>
-          </div>
+          </div> */}
 
         </div>
 
