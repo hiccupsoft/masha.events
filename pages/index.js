@@ -52,7 +52,7 @@ const Home = () => {
                   <p>The best of Russian music, treats and of course alcohol with DJ Liana.
                     Dancers, competitions and more!
                     Tickets available now!</p>
-                  <button onClick={handleClick}>
+                  <button className="card_body-detail-button" onClick={handleClick}>
                     <a> View details </a>
                   </button>
                 </div>

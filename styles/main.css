@@ -155,6 +155,10 @@ h1, h2 ,h3 ,h4 , h6 , p {
     padding-top: 14px;
 }
 
+.card_body-detail-button {
+    color: #FFFFFF;
+}
+
 .card-details-wrapper h2 {
     color: #FFFFFF;
     font-size: 26px;
