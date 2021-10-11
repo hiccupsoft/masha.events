@@ -6,6 +6,9 @@ const Home = () => {
   const handleClick = (e) => {
     e.preventDefault()
     router.push('/russian-night-with-dj-liana')
+
+    //For test
+    // router.push('/demo')
   }
 
   return (
@@ -17,8 +20,8 @@ const Home = () => {
           </div>
           <div className="main-wrapper">
             <div className="main-header-wrap">
-              <h1>The best parties on The Rock</h1>
-              <p>We’ve been throwing amazing parties since 2010 porta sem malesuada magna mollis euismod. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. </p>
+              <h1>High class event concepts </h1>
+              <p>We just started our revolutionary concept for Russian and Italian nights in Malta, why don't you join us in our adventure and visit our amazing parties ?!</p>
             </div>
             <img src="static/images/wave.png" alt="" className="wave-img" />
 
@@ -46,12 +49,10 @@ const Home = () => {
                     <h3>Russian Night with DJ Liana. </h3>
                     <p>Friday, Oct 15, 2020  |  21:00 - 03:00</p>
                   </div>
-                  <button> €35.00 to  €410.00</button>
+                  <button> €35.00 to  €200.00</button>
                 </div>
                 <div className="card_body">
-                  <p>The best of Russian music, treats and of course alcohol with DJ Liana.
-                    Dancers, competitions and more!
-                    Tickets available now!</p>
+                  <p>We invite you to our luxurious party 'Russian Night' with the wonderful and amazing DJ Liana.</p>
                   <button className="card_body-detail-button" onClick={handleClick}>
                     <a> View details </a>
                   </button>

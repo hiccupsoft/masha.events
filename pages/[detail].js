@@ -1,4 +1,9 @@
+import { useRouter } from 'next/router'
+
+
 const RussianNightWithDJLiana = (props) => {
+
+    const router = useRouter();
 
     const handleBackToHome = (e) => {
         e.preventDefault()
@@ -10,7 +15,7 @@ const RussianNightWithDJLiana = (props) => {
             <header className="header-details-section">
                 <div className="container">
                     <div className="site-logo1">
-                        <img src="static/images/logo.svg" alt="" />
+                        <img src="static/images/logo.svg" onClick={handleBackToHome} alt="" />
                     </div>
                     <div className="details-inner-section">
                         <div className="home-page">
@@ -28,8 +33,7 @@ const RussianNightWithDJLiana = (props) => {
                                 <a href="https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503"><button className="book-now">Book now</button></a>
                                 <p>All sales are final. Once booked, tickets can not be transferred or refunded.</p>
                                 <div className="booking-card-footer">
-                                    <a href="">Terms &amp; conditions</a>
-                                    <i className="fas fa-chevron-right"></i>
+
                                 </div>
                             </div>
                         </div>
@@ -43,18 +47,21 @@ const RussianNightWithDJLiana = (props) => {
                     <div className="venue-details-wrapper">
                         <div className="address-wrapper">
                             <h1>{props.title}</h1>
-                            <p>{props.title}. <br />
-                                The best of Russian music, treats and of course alcohol with DJ Liana. Dancers, competitions and
-                                more! </p>
-                            <p className="ticket-para">
-                                Tickets available below! <br /> - 35 Euro Entrance Fee <br /> - 200 Euro Minimum Spend for a V.I.P
-                                Table
-                            </p>
+
+                            <p>We invite you to our luxurious party Russian Night with the wonderful and amazing DJ Liana.</p>
+
+                            <p>DJ Liana is a glamorous Russian model and deejay, that played at the world’s most famous clubs and events.</p>
+
+                            <p>Enjoy our dancers and an amazing fireshow at 23:00.</p>
+
+                            <p>Instagram: <a href="https://instagram/@djlianaofficial">@djlianaofficial</a>.</p>
+
+                            <p>A vaccination certificate is required.</p>
 
                             <h1 className="question">Have questions?</h1>
-                            <p> We would love to answer all your questions. Just email our team at </p>
-                            <p>
-                                <a href="info@groovemedia.eu"> info@groovemedia.eu </a> and we’ll get back to you asap.
+
+                            <p> We would love to answer all your questions. Just email our team at 
+                                info [@] masha.event and we’ll get back to you asap.
                             </p>
                         </div>
                         <div className="map">
@@ -65,18 +72,10 @@ const RussianNightWithDJLiana = (props) => {
                             </div>
 
 
-                            <div className="address-wrapper address-flex">
+                           <div className="address-wrapper address-flex">
                                 <h1 className="location-heading">{props.address1}</h1>
                                 <span>{props.address2}</span>
-                                <div className="social-group">
-                                    <h1>Share with friends</h1>
-                                    <div className="social-icons">
-                                        <img src="static/images/facebook.svg" alt="" />
-                                        <img src="static/images/google.svg" alt="" />
-                                        <img src="static/images/twitter.svg" alt="" />
-                                        <img src="static/images/file.svg" alt="" />
-                                    </div>
-                                </div>
+
                             </div>
                         </div>
                     </div>

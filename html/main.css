@@ -18,17 +18,13 @@ body {
 	-webkit-text-size-adjust: 100%;
 }
 
-h1, h2 ,h3 ,h4 , h6 , p, a {
+h1, h2 ,h3 ,h4 , h6 , p {
     font-family: 'Source Sans Pro', sans-serif;
     margin-bottom: 0;
 }
 
 .site-logo {
     padding-top: 93px;
-}
-
-.site-logo img {
-    width:325px;
 }
 
 
@@ -54,8 +50,8 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
 
 .main-header-wrap p {
     color: #FFFFFF;
-    font-size: 24px;
-    line-height: 37px;
+    font-size: 18px;
+    line-height: 29px;
     max-width: 468px;
 }
 
@@ -157,10 +153,6 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
     justify-content: space-between;
     align-items: flex-end;
     padding-top: 14px;
-}
-
-.card_body-detail-button {
-    color: #FFFFFF;
 }
 
 .card-details-wrapper h2 {
@@ -293,8 +285,7 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
 
 /*********** Details-Page ********/
 .details-inner-section {
-    background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../public/static/images/details-img1.jpg');
-    background-size: cover;
+    background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url(./images/details-img1.jpg);    background-size: cover;
     background-repeat: no-repeat;
     padding:27px 68px 54px 103px ;
     margin-top: 67px;
@@ -309,15 +300,10 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
 }
 
 .home-page a {
-    color: #FFFFFF!important;
-    font-weight:600;
-    font-size: 30px;
-    line-height: 45px;
+    color: #FFFFFF;
+    font-size: 24px;
+    line-height: 39px;
     text-decoration: none;
-}
-
-.home-page a:hover {
-    cursor:pointer;
 }
 
 .home-page i {
@@ -334,9 +320,8 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
     color: #FFFFFF;
     font-size: 66px;
     line-height: 84px;
-    font-weight:600;
     max-width: 466px;
-    filter: drop-shadow(0px 6px 12px #dc9827);
+    font-weight: 600;
 }
 
 .booking-card {
@@ -474,10 +459,6 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
     line-height: 29px;
 }
 
-.address-wrapper p {
-    margin-bottom:1em;
-}
-
 .address-wrapper a {
     text-decoration: none;
     color: #EF9D1E;
@@ -490,7 +471,7 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
     padding-top: 70px;
 }
 
-@media(min-width:1px) and (max-width:420px) {
+@media(min-width:320px) and (max-width:420px) {
 
     .mobile-banner {
         min-height: 440px !important;
@@ -631,12 +612,6 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
     top: -170px; */
     display: none;
 }
-
-.main-header-wrap p {
-    font-size: 18px !important;
-    line-height: 24px !important;
-}
-
 
 .card-details-wrapper, .details-wrapper-1 {
     position: static;  
@@ -792,8 +767,8 @@ h1, h2 ,h3 ,h4 , h6 , p, a {
 
 
 .main-header-wrap p {
-    font-size: 30px;
-    line-height: 40px;
+    font-size: 16px;
+    line-height: 26px;
     text-align: center;
   
 }
