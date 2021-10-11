@@ -1,7 +1,7 @@
 import { useRouter } from 'next/router'
 
 
-const RussianNightWithDJLiana = (props) => {
+const Detail = (props) => {
 
     const router = useRouter();
 
@@ -123,4 +123,4 @@ export const getServerSideProps = async ({ req, res, resolvedUrl }) => {
     }
 };
 
-export default RussianNightWithDJLiana;
+export default Detail;
