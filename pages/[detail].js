@@ -48,15 +48,7 @@ const Detail = (props) => {
                         <div className="address-wrapper">
                             <h1>{props.title}</h1>
 
-                            <p>We invite you to our luxurious party Russian Night with the wonderful and amazing DJ Liana.</p>
-
-                            <p>DJ Liana is a glamorous Russian model and deejay, that played at the world’s most famous clubs and events.</p>
-
-                            <p>Enjoy our dancers and an amazing fireshow at 23:00.</p>
-
-                            <p>Instagram: <a href="https://instagram/@djlianaofficial">@djlianaofficial</a>.</p>
-
-                            <p>A vaccination certificate is required.</p>
+                            <div dangerouslySetInnerHTML={{ __html: props.detail_html }} ></div>
 
                             <h1 className="question">Have questions?</h1>
 
