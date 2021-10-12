@@ -10,7 +10,8 @@
         "description": "We invite you to our luxurious party 'Russian Night' with the wonderful and amazing DJ Liana.",
         "location": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12923.61887053633!2d14.4827954!3d35.9248322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40576436b0c1d0a0!2sIvy%20House%20Malta!5e0!3m2!1sen!2sin!4v1633532251884!5m2!1sen!2sin",
         "address1": "Ivy House Malta",
-        "address2": "Triq Tunis, Pembroke, Malta"
+        "address2": "Triq Tunis, Pembroke, Malta",
+        "booking_link": "https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503"
     },
     {
         "id": 2,
@@ -23,7 +24,8 @@
         "description": "We invite you to our demo party",
         "location": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12923.61887053633!2d14.4827954!3d35.9248322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40576436b0c1d0a0!2sIvy%20House%20Malta!5e0!3m2!1sen!2sin!4v1633532251884!5m2!1sen!2sin",
         "address1": "Ivy House Malta",
-        "address2": "Triq Tunis, Pembroke, Malta"
+        "address2": "Triq Tunis, Pembroke, Malta",
+        "booking_link": "https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503"
     },
     {
         "id": 3,
@@ -36,6 +38,7 @@
         "description": "The best of Russian music, treats and of course alcohol with DJ Liana. Dancers, competitions and more! Tickets available now!",
         "location": "https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12923.61887053633!2d14.4827954!3d35.9248322!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x40576436b0c1d0a0!2sIvy%20House%20Malta!5e0!3m2!1sen!2sin!4v1633532251884!5m2!1sen!2sin",
         "address1": "Ivy House Malta",
-        "address2": "Triq Tunis, Pembroke, Malta"
+        "address2": "Triq Tunis, Pembroke, Malta",
+        "booking_link": "https://www.chitzo.com/Events/ViewEvent/whatson-pembroke-night-clubs-russian-night.42503"
     }
 ]
