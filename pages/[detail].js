@@ -115,11 +115,24 @@ const Detail = (props) => {
 export const getServerSideProps = async ({ req, res, resolvedUrl }) => {
     console.log(process.env.NEXT_PUBLIC_APP_URL);
 
-    const url = resolvedUrl.replace("/", "");
-    const ret = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events/${url}`);
-    const data = await ret.json();
-    return {
-        props: data
+    try{
+        const path = resolvedUrl.replace("/", "");
+        let res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events`);
+        const allEvents = await res.json();
+        console.log(allEvents);
+        let detail = allEvents.find(x => x.path === path);
+        console.log(detail)
+        res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events/${detail.id}`);
+        const data = await res.json();
+        return {
+            props: data
+        }
+    }
+    catch(ex){
+        console.log(ex)
+        return {
+            props: {}
+        }
     }
 };
 

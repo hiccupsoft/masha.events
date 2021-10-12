@@ -1,5 +1,6 @@
 [
     {
+        "id": 1,
         "path": "russian-night-with-dj-liana",
         "datetime": "Friday, Oct 15, 2020 | 21:00 - 03:00", 
         "title": "Russian Night with DJ Liana", 
@@ -9,6 +10,7 @@
         "address2": "Triq Tunis, Pembroke, Malta"
     },
     {
+        "id": 2,
         "path": "demo",
         "datetime": "Saturday, Oct 16, 2020 | 22:00 - 04:00", 
         "title": "Demo Title", 
