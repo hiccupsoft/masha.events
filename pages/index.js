@@ -1,16 +1,7 @@
-import { useRouter } from 'next/router'
+import Link from 'next/link'
 
-const Home = () => {
-  const router = useRouter();
-
-  const handleClick = (e) => {
-    e.preventDefault()
-    router.push('/russian-night-with-dj-liana')
-
-    //For test
-    // router.push('/demo')
-  }
-
+const Home = (props) => {
+  console.log(props)
   return (
     <div>
       <header className="header-section">
@@ -37,29 +28,36 @@ const Home = () => {
 
       <section className="main-section-wrapper">
         <div className="container">
-          <div className="card-wrapper-section">
-            <div className="details-wrapper">
-              <img src="static/images/card-2.jpg" alt="" className="card-1-img" />
-            </div>
-            <div className="card-details-wrapper">
-              <h2>Featured party</h2>
-              <div className="card-info" >
-                <div className="card_header">
-                  <div className="card_title">
-                    <h3>Russian Night with DJ Liana. </h3>
-                    <p>Friday, Oct 15, 2020  |  21:00 - 03:00</p>
-                  </div>
-                  <button> €35.00 to  €200.00</button>
+          {props.events.map((item, id)=>{
+            return (
+              <div key={id} className="card-wrapper-section">
+                <div className="details-wrapper">
+                  <img src={`static/images/${item.image}`} alt="" className="card-1-img" />
                 </div>
-                <div className="card_body">
-                  <p>We invite you to our luxurious party 'Russian Night' with the wonderful and amazing DJ Liana.</p>
-                  <button className="card_body-detail-button" onClick={handleClick}>
-                    <a> View details </a>
-                  </button>
+                <div className="card-details-wrapper">
+                  <h2>{item.header}</h2>
+                  <div className="card-info" >
+                    <div className="card_header">
+                      <div className="card_title">
+                        <h3>{item.title}</h3>
+                        <p>{item.datetime}</p>
+                      </div>
+                      <button>{item.price}</button>
+                    </div>
+                    <div className="card_body">
+                      <p>{item.description}</p>
+                      <Link href={item.path}>
+                        <button className="card_body-detail-button">
+                          <a> View details </a>
+                        </button>
+                      </Link>
+                    </div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
+            )
+          })}
+
           {/* <div className="card-wrapper-section" id="mobile-card">
             <div className="card-details-wrapper_1">
               <h2 className="right-title">Featured party</h2>
@@ -114,5 +112,24 @@ const Home = () => {
     </div>
   )
 }
+
+export const getServerSideProps = async () => {
+  console.log(process.env.NEXT_PUBLIC_APP_URL);
+
+  try{
+    let res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events`);
+    const events = await res.json();
+
+    return {
+      props: { events }
+    }
+  }
+  catch(ex){
+    console.log(ex)
+    return {
+      props: { events: [] }
+    }
+  }
+};
 
 export default Home;

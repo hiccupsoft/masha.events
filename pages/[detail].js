@@ -112,17 +112,17 @@ const Detail = (props) => {
     )
 }
 
-export const getServerSideProps = async ({ req, res, resolvedUrl }) => {
+export const getServerSideProps = async (context) => {
     console.log(process.env.NEXT_PUBLIC_APP_URL);
 
     try{
-        const path = resolvedUrl.replace("/", "");
+        const {detail} = context.query;
         let res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events`);
         const allEvents = await res.json();
         console.log(allEvents);
-        let detail = allEvents.find(x => x.path === path);
+        let item = allEvents.find(x => x.path === '/'+detail);
         console.log(detail)
-        res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events/${detail.id}`);
+        res = await fetch(`${process.env.NEXT_PUBLIC_APP_URL}/api/events/${item.id}`);
         const data = await res.json();
         return {
             props: data
