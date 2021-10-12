@@ -29,7 +29,7 @@ const Home = (props) => {
       <section className="main-section-wrapper">
         <div className="container">
           {props.events.map((item, id)=>{
-            return (
+            return id % 2 === 0? (
               <div key={id} className="card-wrapper-section">
                 <div className="details-wrapper">
                   <img src={`static/images/${item.image}`} alt="" className="card-1-img" />
@@ -56,33 +56,35 @@ const Home = (props) => {
                 </div>
               </div>
             )
-          })}
-
-          {/* <div className="card-wrapper-section" id="mobile-card">
-            <div className="card-details-wrapper_1">
-              <h2 className="right-title">Featured party</h2>
-              <div className="card-info" >
-                <div className="card_header">
-                  <div className="card_title">
-                    <h3>Russian Night with DJ Liana. </h3>
-                    <p>Friday, Oct 15, 2020  |  21:00 - 03:00</p>
+            :
+            (
+              <div key={id} className="card-wrapper-section" id="mobile-card">
+                <div className="card-details-wrapper_1">
+                  <h2 className="right-title">{item.header}</h2>
+                  <div className="card-info" >
+                    <div className="card_header">
+                      <div className="card_title">
+                        <h3>{item.title}</h3>
+                        <p>{item.datetime}</p>
+                      </div>
+                      <button>{item.price}</button>
+                    </div>
+                    <div className="card_body">
+                      <p>{item.description}</p>
+                      <Link href={item.path}>
+                        <button className="card_body-detail-button">
+                          <a> View details </a>
+                        </button>
+                      </Link>
+                    </div>
                   </div>
-                  <button> €35.00 to  €410.00</button>
                 </div>
-                <div className="card_body">
-                  <p>The best of Russian music, treats and of course alcohol with DJ Liana.
-                    Dancers, competitions and more!
-                    Tickets available now!</p>
-                  <button onClick={handleClick}> <a> View details </a>
-                  </button>
+                <div className="details-wrapper-1">
+                  <img src="static/images/card-1.png" alt="" className="card-2-img" />
                 </div>
               </div>
-            </div>
-            <div className="details-wrapper-1">
-              <img src="static/images/card-1.png" alt="" className="card-2-img" />
-            </div>
-          </div> */}
-
+            )
+          })}
         </div>
 
       </section>
