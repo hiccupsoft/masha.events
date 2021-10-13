@@ -80,7 +80,7 @@ const Home = (props) => {
                   </div>
                 </div>
                 <div className="details-wrapper-1">
-                  <img src="static/images/card-1.png" alt="" className="card-2-img" />
+                  <img src={`static/images/${item.image}`} alt="" className="card-2-img" />
                 </div>
               </div>
             )
